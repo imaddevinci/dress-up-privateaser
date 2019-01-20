@@ -2,20 +2,81 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Privateaser</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #808080;
+  color: white;
+  background-image: url("https://www.alaclochedor.com/blog/wp-content/uploads/2017/02/shutterstock_164673605-1200x800.jpg");
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+.js-price-by-hour { 
+position: relative; /* on positionne le conteneur */
+position: sticky;
+  position: -webkit-sticky;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 150px;
+	 
+}
+
+.firstLine {
+  position: relative;
+  left: 405px;
+  padding: 10px;
+}
+
+.secondLine {
+  position: relative;
+  left: 405px;
+  padding: 10px;
+}
+.compute {
+  position: relative;
+  left: 830px;
+  padding: 10px;
+}
+body {
+  background-image: url("paper.gif");
+}
+</style>
   </head>
-  <body>
-    <div id="bar">
+  <body>  
+  <div class="header">
+  <h1>privatiseur</h1>
+  <p>A bar/restaurant <b> reservation</b> website.</p>
+</div>
+    <div id="bar" class="firstLine">
       <input class="js-name" type="text" placeholder="Bar name"/>
       <input class="js-price-by-hour" type="number" placeholder="Price by hour"/>
       <input class="js-price-by-person" type="number" placeholder="Price by person"/>
     </div>
-    <div id="booker">
+    <div id="booker" class="secondLine">
       <input class="js-name" type="text" placeholder="Booker name"/>
       <input class="js-time" type="number" placeholder="Time in h"/>
       <input class="js-persons" type="number" placeholder="Persons"/>
       <input class="js-option" type="checkbox" placeholder="Deductible option"/>
     </div>
-    <button id="compute">Compute</button>
+	<div class="compute">
+	<button id="compute">Compute</button>
+	</div>	   
     <div id="actors"></div>
     <script src="privateaser.js"></script>
     <script src="index.js"></script>
